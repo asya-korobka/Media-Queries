@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,500,700');
+
+/* Global */
+* {
+  box-sizing: border-box;
+}
+body{
+  color: #090b08;
+  margin:  0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  background-color: #FFFF;
+}
+h1{
+  font-size: 1.7em;
+  font-weight: 700;
+  line-height: 1.5em;
+  text-transform: uppercase;
+}
+h2{
+  text-transform: uppercase;
+}
+h4{
+  font-size: .8em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+h6{
+  font-weight: 500;
+}
+a{
+  text-decoration: none;
+  color: #090b08;
+}
+ul{
+  list-style: none;
+}
+section{
+  padding: 5.8em 2em 0;
+}
+.title{
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 1em;
+}
+.title.title-right{
+  justify-content: flex-end;
+}
+.line{
+  width: 3em;
+  height: 1px;
+  background-color: #000;
+  margin-right: 1em;
+}
+.line.line-right{
+  order: 2;
+  margin-right: 0;
+  margin-left: 1em;
+}
+.btn{
+  display: inline-block;
+  padding: .5em 1.5em;
+  border: solid 1px #090b08;
+  transition: all .3s ease-in;
+}
+.btn:hover, .btn:focus{
+  transform: translate(0px, -2px);
+  -webkit-box-shadow: 0px 10px 7px -9px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 7px -9px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 7px -9px rgba(0,0,0,0.75);
+  transition: all .3s ease-out;
+}
+
+/* Header */
+header{
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-around;
+  z-index: 1;
+}
+header:before{
+  content: "";
+  position: absolute;
+  background-color: #ABB0FD;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.22);
+  -moz-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.22);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.22);
+}
+
+.toggle-menu{
+  display: block;
+  font-size: 1.2em;
+  align-self: center;
+  cursor: pointer;
+}
+input[type="checkbox"]{
+  display: none;
+}
+input[type="checkbox"]:hover ~ .toggle-menu,
+input[type="checkbox"]:checked ~ .toggle-menu
+{
+  border-bottom: solid 1px #090b08;
+}
+input[type="checkbox"]:checked ~ .navbar{
+  display: flex;
+  flex-direction: column;
+}
+.navbar{
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #9AA0FE;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: -2;
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 4em 0 0;
+}
+a.nav-link{
+  margin-right: 0;
+}
+a.nav-link:hover,
+a.nav-link:active,
+a.nav-link:focus{
+  border-bottom: solid 1.8px #090b08;
+}
+.menu li{
+  margin-top: 3em;
+}
+.social-menu{
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+.social-menu li a{
+  margin: 0 .5em;
+  padding: .5em;
+}
+.social-menu li a{
+  font-size: 1.2em;
+}
+.social-menu li a:hover,
+.social-menu li a:active,
+.social-menu li a:focus
+{
+  border-bottom: solid 1px #000;
+}
+
+
+
+/* Featured Section */
+
+.text{
+  flex: 1;
+  padding-top: 5em;
+}
+.text p{
+  text-align: justify;
+  padding-bottom: 1em;
+  line-height: 1.4em;
+}
+ .circleFlower{
+  display: flex;
+  padding-top: 6em;
+  float: right;
+  width: 500px; 
+  height: auto;
+}
+
+/* Image Section */
+.flower {
+  display: flex;
+  padding-top: 15em;
+}
+
+.image-wrapper {
+  position: relative;
+  text-align: center; /* Вирівнювання зображення по центру */
+}
+
+.image-wrapper img {
+  height: auto; /* Автоматично обчислюємо висоту для збереження пропорцій */
+  display: inline-block; /* Встановлення зображення як блочний елемент */
+  justify-content: center; /* Центрування по горизонталі */
+
+}
+.flower .btn {
+  position: absolute; /* Абсолютне позиціонування */
+  bottom: 10px; /* Відступ від нижнього краю */
+  left: 50%; /* Розташування кнопки по горизонталі відносно батьківського контейнера */
+  transform: translateX(-50%); /* Центрування кнопки по горизонталі */
+  width: 195px; /* Ширина кнопки */
+  height: 54px; /* Висота кнопки */
+  background-color: black; /* Колір фону кнопки */
+  color: white; /* Колір тексту на кнопці */
+  font-size: 16px;
+  line-height: 54px; /* Висота кнопки */
+  padding: 0 45px; /* Відступи всередині кнопки */
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Плавний перехід */
+  text-align: center; /* Вирівнювання тексту по центру */
+
+}
+
+.flower .btn:hover {
+  background-color: black;
+  color: white;
+  transform: translateX(-50%) scale(1.05); /* Збільшення кнопки на 5% при наведенні */
+}
+.information {
+  padding-top: 10em;
+  position: relative;
+  max-width: 1000px; 
+  margin: 0 auto;
+  display: grid; /* Використовуємо Grid */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Адаптивні стовпці */
+  gap: 20px; /* Відступ між елементами */
+  align-items: center; /* Вирівнювання елементів по вертикалі */
+  justify-content: center; /* Вирівнювання елементів по горизонталі */
+  font-family: Arial, sans-serif;
+  padding-bottom: 10em;
+}
+
+.information .text {
+  padding: 10px; /* внутрішні відступи */
+  text-align: center;
+}
+
+.information .image {
+  max-width: 100%; 
+  display: block; 
+  margin-left: 20px; 
+}
+
+
+/* About Section */
+#work {
+  background-color: #ABB0FD;
+  text-align: center;
+}
+
+section#work {
+  padding-bottom: 5.8em;
+}
+
+#work .text {
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 2em;
+}
+
+#work .text p {
+  padding-bottom: 0;
+  text-align: left;
+}
+
+#work .container {
+  display: grid; /* Використовуємо Grid */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Адаптивні стовпці */
+  gap: 20px; /* Відступ між елементами */
+  justify-content: center; /* Центрування по горизонталі */
+  align-items: center; /* Центрування по вертикалі */
+  padding-top: 10vh; /* Зменшуємо висоту відступу */
+  margin: 0 auto; /* Автоматичне вирівнювання по центру */
+  max-width: 1200px; /* Максимальна ширина контейнера */
+}
+
+#work .image-wrapper {
+  position: relative;
+}
+
+#work .image-wrapper img {
+  max-width: 100%; /* Зображення не виходить за межі контейнера */
+  display: block; /* Усуваємо внутрішні проміжки */
+}
+
+#work .text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+#catalog {
+  text-align: center; /* Вирівнювання по центру */
+}
+
+.catalog-text {
+  text-align: left; /* Вирівнювання тексту вліво */
+  margin-left: 50px; /* Відступ зліва */
+}
+
+.catalog {
+  display: grid; /* Використовуємо Grid */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивні стовпці */
+  gap: 20px; /* Відступ між елементами */
+  justify-content: center; /* Центрування по горизонталі */
+  margin-bottom: 10px; /* Відступ знизу */
+}
+
+.catalog img {
+  width: 80%; /* Ширина на всю ширину контейнера */
+  transition: transform 0.3s ease; /* Плавний перехід */
+  max-width: 80%;
+}
+
+.catalog img:hover {
+  transform: scale(1.1); /* Збільшення при наведенні */
+}
+@media screen and (max-width: 768px) {
+  .catalog img {
+    width: 60%; /* Зменшення ширини зображення для екранів ширше 768px, але менше 1024px */
+  }
+}
+
+.feedback {
+  max-width: 2000px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #F4F4FF;
+  display:flexbox;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.feedback img {
+  max-width: 90%;
+  margin-bottom: 10px;
+}
+
+.feedback .input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#name,
+#description {
+  width: calc(100% - 10px); /* Встановлюємо ширину на 100% з врахуванням відступів ліворуч і праворуч */
+  height: 100px; /* Збільшуємо висоту поля введення */
+  margin-bottom: 20px;
+  padding: 10px; /* Збільшуємо відступ всередині поля введення */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-left: 50px; /* Відступ від лівого краю */
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #ABB0FD;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Додали плавний перехід */
+}
+
+.button:hover {
+  transform: scale(1.1); /* Збільшуємо розмір кнопки на 10% при наведенні */
+}
+
+.contact-section {
+  background-color: #8a2be2;
+  display: grid; /* Використовуємо Grid */
+  grid-template-columns: repeat(3, 1fr); /* Три колонки з рівною шириною */
+  gap: 20px; /* Відступ між елементами */
+  padding: 20px;
+}
+
+.contact-column {
+  display: flex; /* Використовуємо Flex для внутрішнього вмісту */
+  flex-direction: column; /* Вертикальна орієнтація для стовпців */
+  justify-content: flex-start; /* Вирівнювання по верхньому краю */
+  padding: 0 10px;
+}
+
+.contact-column h3 {
+  color: #fff;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.contact-column p {
+  color: #fff;
+  font-size: 1em;
+}
+
+/* Responsive Style */
+
+@media screen and (max-width: 534px) {
+  .toggle-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #9AA0FE;
+    z-index: 1;
+  }
+
+  #toggle-menu:checked + .navbar .menu {
+    display: block;
+  }
+  .image-wrapper img {
+    padding: 3.2em;
+    height: auto; /* Автоматично обчислюємо висоту для збереження пропорцій */
+    display: inline-block; /* Встановлення зображення як блочний елемент */
+    justify-content: center;
+  }
+  .circleFlower{
+   
+    justify-content: center;
+  }
+  .image-wrapper {
+    width: 50%; /* Зменшуємо ширину .flower в два рази */
+    margin-left: 25%; /* Центруємо .flower на мобільних пристроях */
+  }
+
+  .flower .btn {
+    left: 50%; /* Розташовуємо кнопку по центру горизонталі на мобільних пристроях */
+    transform: translateX(-50%); /* Центруємо кнопку по горизонталі на мобільних пристроях */
+    bottom: 5%; /* Змінюємо відступ від нижнього краю на мобільних пристроях */
+  }
+
+  .information {
+    padding-top: 5em; /* Змінюємо верхній відступ для інформаційного розділу на мобільних пристроях */
+  }
+
+  .catalog img {
+    width: 100%; /* Змінюємо ширину зображення на мобільних пристроях */
+    max-width: 100%; /* Змінюємо максимальну ширину зображення на мобільних пристроях */
+  }
+
+  .contact-section {
+    grid-template-columns: 1fr; /* Одна колонка на мобільних пристроях */
+  }
+
+  .contact-column {
+    padding: 0; /* Видаляємо внутрішні відступи для колонок на мобільних пристроях */
+    text-align: center; /* Центруємо текст в колонках на мобільних пристроях */
+  }
+}
+@media(min-width: 768px){
+  /*  Global  */
+  .wrapper{
+    display: flex;
+  }
+
+  /*  Header  */
+  .nav-brand img{
+    height: 10em;
+  }
+  .toggle-menu{
+    display: none;
+  }
+  .navbar{
+    display: flex;
+    position: relative;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    z-index: 1;
+  }
+  .menu{
+    flex-direction: row;
+    padding: 0;
+    justify-content: flex-end;
+  }
+  .social-menu{
+    display: none;
+  }
+  .menu li{
+    margin-top: 0;
+  }
+  a.nav-link{
+    margin-right: 3em;
+  }
+
+  /*  Featured Section  */
+  .text{
+    text-align: left;
+    margin: 0 0 auto 4em;
+  }
+  #featured .text{
+    flex: 1;
+    order: 1;
+  }
+  #featured .image{
+    flex: 1 0 12em;
+    order: 2;
+  }
+  /*  Information Section  */
+  .text{
+    text-align: left;
+    margin: 0 0 auto 4em;
+  }
+  #information .text{
+    flex: 1;
+    order: 1;
+  }
+  /*  About Section  */
+  #about .wrapper{
+    display: block;
+  }
+  #about .text{
+    margin-right: 4em;
+  }
+  .video-wrapper{
+    margin: auto 4em;
+  }
+
+  /* Contact Section  */
+  #contact .wrapper{
+    flex-wrap: wrap;
+  }
+  .form-wrapper, .contact-wrapper {
+    flex: 1 0 100%; /* Займає всю доступну ширину */
+    align-self: center;
+    padding: 0 3em;
+  }
+  
+  .copy-wrapper {
+    flex: 1 0 100%; /* Займає всю доступну ширину */
+    padding: 0 1em;
+  }
+  .form-wrapper:after,
+  .contact-wrapper:after{
+    display: none;
+  }
+  .contact-footer{
+    border: 0;
+    padding: 0;
+    margin: .6em auto;
+    text-align: left;
+  }
+  .contact-footer:hover{
+    background-color: transparent;
+  }
+
+  .contact-wrapper a i{
+    width: auto;
+    padding-right: 1em;
+  }
+  .contact-wrapper .social-menu{
+    display: flex;
+    order: 3;
+    justify-content: flex-start;
+  }
+  .contact-wrapper .social-menu a i{
+    padding-right: 0;
+  }
+  .copy-wrapper:before{
+    display: block;
+    content: "";
+    margin: 2em auto;
+    border-bottom: solid 1px #dadada;
+  }
+}
+@media(min-width: 992px){
+  /*  Global  */
+  section{
+    padding: 5.8em 7em 0;
+  }
+  .title.title-left{
+    margin-left: -2.5em;
+  }
+  .title.title-right{
+    margin-right: -2.5em;
+  }
+  .line{
+    width: 5.5em;
+  }
+
+  /*  Hero Section  */
+  .hero-img img{
+    width: 14.5em;
+  }
+
+  /*  Featured Section  */
+  #featured .image{
+    margin-top: -2em;
+  }
+
+  /* About Section  */
+  #about .wrapper{
+    display: flex;
+  }
+  #about .text{
+    flex: 1 0 40%;
+    margin-right: 1em;
+    padding-bottom: 0;
+  }
+  .contact-tel{
+    flex-basis: 20%;
+  }
+}
+@media(min-width: 1200px){
+  /*  Global  */
+  h1{
+    font-size: 2.4em;
+  }
+  section{
+    padding: 5.8em 11em 0;
+  }
+  /*  Hero Section  */
+  .hero-img img{
+    width: 15.5em;
+  }
+  /*  Featured Section  */
+  #featured .image{
+    margin-top: -4em;
+  }
+}
